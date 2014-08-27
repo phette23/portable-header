@@ -4,7 +4,9 @@
   "description": "Header meant for inclusion in LibGuides and other third-party apps where you can paste some HTML in a box but not much else.",
   "main": "app/index.html",
   "scripts": {
-    "hi": "echo hello"
+    "build": "grunt build",
+    "lint": "grunt lint",
+    "watch": "grunt watch"
   },
   "author": "phette23 <phette23@gmail.com> (http://phette.net/)",
   "license": "GPL",
