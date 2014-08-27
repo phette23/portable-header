@@ -106,7 +106,7 @@ module.exports = function (grunt) {
             }
         },
         exec: {
-            clean: 'rm -rf build'
+            clean: 'rm -rf build' // @todo not portable, use grunt-clean
         },
         watch: {
             dist: {
