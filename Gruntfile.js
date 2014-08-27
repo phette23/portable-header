@@ -78,6 +78,7 @@ module.exports = function (grunt) {
                 files: {
                     'build/js/app.js': 'app/js/app.js',
                     'build/css/main.scss': 'app/css/main.scss',
+                    'build/css/_vars.scss': 'app/css/_vars.scss',
                     'build/index.html': 'app/index.html'
                 },
                 options: {
@@ -106,6 +107,12 @@ module.exports = function (grunt) {
         },
         exec: {
             clean: 'rm -rf build'
+        },
+        watch: {
+            dist: {
+                files: ['app/**'],
+                tasks: ['build']
+            }
         }
     });
 
@@ -123,6 +130,5 @@ module.exports = function (grunt) {
         'htmlmin'
     ]);
 
-    // @todo watch task
     // @todo serve task
 };
