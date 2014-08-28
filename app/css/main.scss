@@ -31,7 +31,7 @@ body {
 
     nav {
       position: relative;
-      width: 100%;
+      width: 100%; // @todo not necessary?
 
       a,
       label {
@@ -48,23 +48,24 @@ body {
       ul {
         padding: 0;
         margin: 0 auto;
-        width: 100%;
+        width: 100%; // @todo not necessary?
         list-style: none;
 
         > li {
           float: left;
           padding:.55em .55em;
-          width: 19%;
+          width: 19.99%;
           background: $bgColor;
           text-align: center;
           transition-duration: .3s;
           transition-timing-function: ease-in-out;
           transition-property: box-shadow, color;
           cursor: pointer;
-          border: 2px solid $borderColor;
+          border: .1em solid $borderColor;
 
           &:hover, &:active {
             background-color: $bgHoverColor;
+            border-color: darken($borderColor, 20%);
             color: $linkHoverColor;
 
             > a {
@@ -91,7 +92,7 @@ body {
           padding:.45em;
           font-size: 1.1em;
           margin: 0;
-          border: .15em solid rgba(60, 60, 60, .2);
+          border: .05em solid rgba(60, 60, 60, .2);
           background: $bgColor;
         }
 
@@ -104,21 +105,22 @@ body {
         }
 
         input[type=checkbox]:checked ~ label:after {
-          color: #222;
+          color: $linkColor;
         }
 
         input[type=checkbox]:checked ~ ul {
           display: block;
 
           > li {
+            border: .05em solid $borderColor;
             width: 100%;
-            opacity:.8;
+            opacity: .8;
             text-align: left;
 
             &:after {
               position: absolute;
-              right:.25em;
-              content:"\232A";
+              right: .25em;
+              content: "\232A";
               font: bold 1.4em sans-serif;
             }
           }
