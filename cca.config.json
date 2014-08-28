@@ -1,3 +1,19 @@
 {
-    "prefix": "cca"
+    "prefix": "cca",
+    "links": [{
+            "text": "Libraries",
+            "url": "http://libraries.cca.edu"
+        }, {
+            "text": "Catalog",
+            "url": "http://library.cca.edu/search"
+        }, {
+            "text": "Databases",
+            "url": "http://libraries.cca.edu/online"
+        }, {
+            "text": "VAULT",
+            "url": "https://vault.cca.edu/logon.do"
+        }, {
+            "text": "Get Help",
+            "url": "mailto:refdesk@cca.edu"
+    }]
 }
