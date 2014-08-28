@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     'use strict';
     // load all grunt tasks
     require('load-grunt-tasks')(grunt);
-    var configFile = grunt.option('config') || config.json,
+    var configFile = grunt.option('config') || 'config.json',
         config = grunt.file.readJSON(configFile);
 
     grunt.initConfig({
@@ -119,8 +119,10 @@ module.exports = function (grunt) {
                 }
             }
         },
-        exec: {
-            clean: 'rm -rf build' // @todo not portable, use grunt-clean
+        clean: {
+            dist: {
+                src: ['build']
+            }
         },
         watch: {
             dist: {
@@ -135,7 +137,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build', [
-        'exec:clean',
+        'clean',
         'copy',
         'string-replace:tpl',
         'uglify',
