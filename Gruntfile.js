@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     'use strict';
     // load all grunt tasks
     require('load-grunt-tasks')(grunt);
-    var config = grunt.file.readJSON('cca.config.json');
+    var config = grunt.file.readJSON('config.json');
 
     grunt.initConfig({
         jshint: {
@@ -85,6 +85,13 @@ module.exports = function (grunt) {
                     replacements: [{
                         pattern: /\{\{prefix\}\}/i,
                         replacement: config.prefix
+                    }, {
+                        pattern: /\{\{link\[(\d)\]\.([a-z0-9]*)\}\}/ig,
+                        replacement: function (match, p1, p2) {
+                            if (config.links[p1]) {
+                                return config.links[p1][p2];
+                            }
+                        }
                     }]
                 }
             },
