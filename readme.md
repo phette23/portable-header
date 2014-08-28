@@ -7,7 +7,7 @@ HTML header meant for inclusion in LibGuides, OPACs, & other third-party apps wh
 The intention is to make this header as reusable as possible simply by specifying different configurations. To build a new header, run `grunt build` (see **Getting Started** section below) & then copy the output inside "build/index.html". To create a new configuration, write your own config.json & then point to it with the "config" flag. So for a "libguides.json" I created, I might run
 
 ```bash
-grunt build --config=libguides.json`
+grunt build --config=libguides.json
 ```
 
 Inside config.json, you define text that will be replaced in the header's code. Currently, you can specify an institutional prefix to avoid code conflicts (e.g. a site might already have an `"id=header"` element), five links and their link text, and two logo images (one for larger screens and one for small). The easiest way to customize is to edit config.json but keep the existing text the same. The configuration must be valid JSON.
