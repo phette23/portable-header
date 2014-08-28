@@ -87,6 +87,12 @@ module.exports = function (grunt) {
                         pattern: /\{\{prefix\}\}/i,
                         replacement: config.prefix
                     }, {
+                        pattern: /\{\{largeImageUrl\}\}/i,
+                        replacement: config.largeImageUrl
+                    }, {
+                        pattern: /\{\{smallImageUrl\}\}/i,
+                        replacement: config.smallImageUrl
+                    }, {
                         pattern: /\{\{link\[(\d)\]\.([a-z0-9]*)\}\}/ig,
                         replacement: function (match, p1, p2) {
                             if (config.links[p1]) {

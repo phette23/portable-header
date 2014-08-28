@@ -15,5 +15,7 @@
         }, {
             "text": "Get Help",
             "url": "mailto:refdesk@cca.edu"
-    }]
+    }],
+    "largeImageUrl": "//s3.amazonaws.com/libapps/accounts/21563/images/orange-logo.jpg",
+    "smallImageUrl": "//s3.amazonaws.com/libapps/accounts/21563/images/orange-logo-620w.jpg"
 }

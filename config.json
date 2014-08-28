@@ -15,5 +15,7 @@
         }, {
             "text": "Get Help",
             "url": "http://www.ipl.org/div/askus/"
-    }]
+    }],
+    "largeImageUrl": "img/tan-logo.jpg",
+    "smallImageUrl": "img/tan-logo-620w.jpg"
 }
