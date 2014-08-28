@@ -10,6 +10,12 @@ body {
 #{{prefix}}-header {
     width: 100%;
 
+    .logo {
+        background: url($logoUrl) no-repeat;
+        background-size: contain;
+        height: 91px;
+        width: 100%; // @todo necessary?
+    }
     // borrows *heavily* from codepen.io/TimPietrusky/pen/gqlhA
 
     * {
@@ -74,6 +80,15 @@ body {
           }
         }
       }
+    }
+
+    // adjust logo image
+    @media screen and (max-width: 620px) {
+        .logo {
+            background: url($smallLogoUrl) no-repeat;
+            background-size: contain;
+            height: 51px;
+        }
     }
 
     /* small screens */
