@@ -2,7 +2,8 @@ module.exports = function (grunt) {
     'use strict';
     // load all grunt tasks
     require('load-grunt-tasks')(grunt);
-    var config = grunt.file.readJSON('config.json');
+    var configFile = grunt.option('config') || config.json,
+        config = grunt.file.readJSON(configFile);
 
     grunt.initConfig({
         jshint: {
