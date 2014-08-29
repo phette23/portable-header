@@ -26,7 +26,7 @@ There are 3 major Grunt tasks available:
 
 - `grunt build` compiles the SASS into CSS, inlines the CSS & JavaScript into index.html, & puts the final product in a new "build" folder
 - `grunt watch` watches for any changes to files inside the "app" folder & then runs `grunt build`
-- `grunt lint` tests your code quality (JSHint on JavaScript files, soon I'll add SCSS-lint for SASS)
+- `grunt lint` tests your code quality (JSHint on JavaScript, SCSS-lint for SASS)
 
 # To Do
 

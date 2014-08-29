@@ -26,6 +26,12 @@ module.exports = function (grunt) {
                   }
             }
         },
+        scsslint: {
+            dist: [ 'app/css/*.scss' ],
+            options: {
+                force: true
+            }
+        },
         uglify: {
             dist: {
                 options: {
@@ -133,7 +139,8 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('lint', [
-        'jshint'
+        'jshint',
+        'scsslint'
     ]);
 
     grunt.registerTask('build', [
