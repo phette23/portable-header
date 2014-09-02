@@ -1,6 +1,6 @@
 # Portable Header
 
-HTML header meant for inclusion in LibGuides, OPACs, & other third-party apps where you can paste some HTML in a textarea but not much else.
+HTML header meant for inclusion in LibGuides, OPACs, & other third-party apps where you can paste some HTML in a textarea but not much else. See [an example](https://phette23.github.io/portable-header/).
 
 # Templating
 
