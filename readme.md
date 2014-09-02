@@ -1,6 +1,6 @@
 # Portable Header
 
-HTML header meant for inclusion in LibGuides, OPACs, & other third-party apps where you can paste some HTML in a textarea but not much else.
+HTML header meant for inclusion in LibGuides, OPACs, & other third-party apps where you can paste some HTML in a textarea but not much else. See [an example](https://phette23.github.io/portable-header/).
 
 # Templating
 
@@ -32,6 +32,6 @@ There are 3 major Grunt tasks available:
 
 - [x] Image URLs as part of config.json
 - [x] Explain JSON options
-- [ ] Example on GitHub pages
+- [x] Example on GitHub pages
 - [ ] Bigger touch targets (`<a>` inside `<li>` should be larger)
 - [ ] Variable number of links?
