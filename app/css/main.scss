@@ -22,7 +22,7 @@ body {
        box-sizing: border-box;
     }
 
-    /* Advanced Checkbox Hack */
+    // Advanced Checkbox Hack
     input[type=checkbox] {
       position: absolute;
       top: -9999px;
@@ -91,7 +91,7 @@ body {
         }
     }
 
-    /* small screens */
+    // small screens get vertical menu
     @media screen and (max-width: 44em) {
       nav {
         ul {
@@ -107,7 +107,7 @@ body {
           padding:.45em;
           font-size: 1.1em;
           margin: 0;
-          border: .05em solid rgba(60, 60, 60, .2);
+          border: .05em solid $borderColor;
           background: $bgColor;
         }
 
