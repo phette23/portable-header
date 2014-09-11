@@ -12,6 +12,7 @@ body {
 
     .logo {
         background: url($logoUrl) no-repeat;
+        background-position-y: 50%;
         background-size: contain;
         height: 91px;
     }
@@ -89,6 +90,7 @@ body {
     @media screen and (max-width: 620px) {
         .logo {
             background: url($smallLogoUrl) no-repeat;
+            background-position-y: 50%;
             background-size: contain;
             height: 51px;
         }
