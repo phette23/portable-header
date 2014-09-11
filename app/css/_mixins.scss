@@ -1,0 +1,5 @@
+@mixin background($url) {
+    background: url($url) no-repeat;
+    background-position-y: 50%;
+    background-size: contain;
+}

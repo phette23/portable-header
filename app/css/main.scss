@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'mixins';
 
 body {
     -webkit-animation: bugfix infinite 1s;
@@ -11,9 +12,7 @@ body {
     width: 100%;
 
     .logo {
-        background: url($logoUrl) no-repeat;
-        background-position-y: 50%;
-        background-size: contain;
+        @include background($logoUrl);
         height: 91px;
     }
     // borrows *heavily* from codepen.io/TimPietrusky/pen/gqlhA
@@ -89,9 +88,7 @@ body {
     // adjust logo image
     @media screen and (max-width: 620px) {
         .logo {
-            background: url($smallLogoUrl) no-repeat;
-            background-position-y: 50%;
-            background-size: contain;
+            @include background($smallLogoUrl);
             height: 51px;
         }
     }
