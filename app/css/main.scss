@@ -14,7 +14,6 @@ body {
         background: url($logoUrl) no-repeat;
         background-size: contain;
         height: 91px;
-        width: 100%; // @todo necessary?
     }
     // borrows *heavily* from codepen.io/TimPietrusky/pen/gqlhA
 
@@ -37,7 +36,6 @@ body {
 
     nav {
       position: relative;
-      width: 100%; // @todo not necessary?
 
       a,
       label {
@@ -61,7 +59,6 @@ body {
       ul {
         padding: 0;
         margin: 0 auto;
-        width: 100%; // @todo not necessary?
         list-style: none;
 
         > li {
