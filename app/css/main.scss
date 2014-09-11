@@ -42,7 +42,7 @@ body {
         color: $linkColor;
         display: block;
         text-decoration: none;
-        font: 1.4em $fontStack;
+        font: $fontSize $fontStack;
         transition: color .3s ease-in-out;
         padding: .55em;
       }
@@ -70,7 +70,7 @@ body {
           transition-timing-function: ease-in-out;
           transition-property: box-shadow, color;
           cursor: pointer;
-          border: .1em solid $borderColor;
+          border: $borderWidth solid $borderColor;
 
           &:hover, &:active {
             background-color: $bgHoverColor;
@@ -107,7 +107,7 @@ body {
           width: 100%;
           min-height: 2.25em;
           margin: 0;
-          border: .05em solid $borderColor;
+          border: ($borderWidth / 2) solid $borderColor;
           background: $bgColor;
         }
 
@@ -127,7 +127,7 @@ body {
           display: block;
 
           > li {
-            border: .05em solid $borderColor;
+            border: ($borderWidth / 2) solid $borderColor;
             width: 100%;
             position: relative; // needed to position :after below
             opacity: .8;
@@ -136,9 +136,9 @@ body {
             &:after {
               position: absolute;
               right: .25em;
-              top: .7em; // @todo magic number, why?
+              top: .7em; // @todo magic number, why? also slightly off in Firefox
               content: "\232A";
-              font: bold 1.4em sans-serif;
+              font: bold $fontSize sans-serif;
             }
           }
         }
