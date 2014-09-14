@@ -2,9 +2,11 @@
 # get latest code from master
 git checkout master -- app/* Gruntfile.js
 # build
-grunt build
+&& grunt build
 # put build into root
-cp -r build/* .
+&& cp -r build/* .
+# no need for assets which were inlined already
+&& rm -rf css js
 # commit & push
-git commit -am "merge changes from master"
-git push
+&& git commit -am "merge changes from master"
+&& git push
