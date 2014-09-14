@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'mixins';
 
 body {
     -webkit-animation: bugfix infinite 1s;
@@ -11,10 +12,8 @@ body {
     width: 100%;
 
     .logo {
-        background: url($logoUrl) no-repeat;
-        background-size: contain;
+        @include background($logoUrl);
         height: 91px;
-        width: 100%; // @todo necessary?
     }
     // borrows *heavily* from codepen.io/TimPietrusky/pen/gqlhA
 
@@ -22,7 +21,7 @@ body {
        box-sizing: border-box;
     }
 
-    /* Advanced Checkbox Hack */
+    // Advanced Checkbox Hack
     input[type=checkbox] {
       position: absolute;
       top: -9999px;
@@ -37,14 +36,20 @@ body {
 
     nav {
       position: relative;
-      width: 100%; // @todo not necessary?
 
       a,
       label {
         color: $linkColor;
+        display: block;
         text-decoration: none;
-        font: 1.4em $fontStack;
+        font: $fontSize $fontStack;
         transition: color .3s ease-in-out;
+        padding: .55em;
+      }
+
+      // override label padding when menu is horizontal
+      label {
+        padding: 0;
       }
 
       a:visited {
@@ -54,12 +59,10 @@ body {
       ul {
         padding: 0;
         margin: 0 auto;
-        width: 100%; // @todo not necessary?
         list-style: none;
 
         > li {
           float: left;
-          padding:.55em .55em;
           width: 19.99%;
           background: $bgColor;
           text-align: center;
@@ -67,7 +70,7 @@ body {
           transition-timing-function: ease-in-out;
           transition-property: box-shadow, color;
           cursor: pointer;
-          border: .1em solid $borderColor;
+          border: $borderWidth solid $borderColor;
 
           &:hover, &:active {
             background-color: $bgHoverColor;
@@ -85,13 +88,12 @@ body {
     // adjust logo image
     @media screen and (max-width: 620px) {
         .logo {
-            background: url($smallLogoUrl) no-repeat;
-            background-size: contain;
+            @include background($smallLogoUrl);
             height: 51px;
         }
     }
 
-    /* small screens */
+    // small screens get vertical menu
     @media screen and (max-width: 44em) {
       nav {
         ul {
@@ -102,12 +104,9 @@ body {
         label {
           position: relative;
           display: block;
-          width: 100%;
           min-height: 2.25em;
-          padding:.45em;
-          font-size: 1.1em;
           margin: 0;
-          border: .05em solid rgba(60, 60, 60, .2);
+          border: ($borderWidth / 2) solid $borderColor;
           background: $bgColor;
         }
 
@@ -115,7 +114,7 @@ body {
           position: absolute;
           right: .25em;
           top: 0;
-          content:"\2261";
+          content:"MENU";
           font-size: 1.8em;
         }
 
@@ -127,16 +126,18 @@ body {
           display: block;
 
           > li {
-            border: .05em solid $borderColor;
+            border: ($borderWidth / 2) solid $borderColor;
             width: 100%;
+            position: relative; // needed to position :after below
             opacity: .8;
             text-align: left;
 
             &:after {
               position: absolute;
               right: .25em;
+              top: .7em; // @todo magic number, why? also slightly off in Firefox
               content: "\232A";
-              font: bold 1.4em sans-serif;
+              font: bold $fontSize sans-serif;
             }
           }
         }
