@@ -12,7 +12,7 @@ grunt build --config=libguides.json
 
 Inside config.json, you define text that will be replaced in the header's code. Currently, you can specify an institutional prefix to avoid code conflicts (e.g. a site might already have an `"id=header"` element), five links and their link text, and two logo images (one for larger screens and one for small). The easiest way to customize is to edit config.json but keep the existing text the same. The configuration must be valid JSON.
 
-There are 2 example configurations in the project, including one for the California College of the Arts in "cca.config.json".
+There are 2 example configurations in the project in the "config" folder, including one for the California College of the Arts in "config/libguides.cca.json".
 
 # Getting Started
 
