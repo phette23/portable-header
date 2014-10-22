@@ -35,6 +35,8 @@ body {
     }
 
     nav {
+      // fix collapsed parent of floated children issue
+      overflow: auto;
       position: relative;
 
       a,
