@@ -34,4 +34,5 @@ There are 3 major Grunt tasks available:
 - [x] Explain JSON options
 - [x] Example on GitHub pages
 - [x] Bigger touch targets (`<a>` inside `<li>` should be larger)
+- [ ] Logo should link somewhere
 - [ ] Variable number of links?
