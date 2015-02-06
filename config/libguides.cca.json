@@ -1,5 +1,6 @@
 {
     "prefix": "cca",
+    "logoLink": "http://libraries.cca.edu",
     "links": [{
             "text": "Libraries",
             "url": "http://libraries.cca.edu"

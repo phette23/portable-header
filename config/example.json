@@ -1,5 +1,6 @@
 {
     "prefix": "yourlib",
+    "logoLink": "http://example.com",
     "links": [{
             "text": "Libraries",
             "url": "http://example.com"

@@ -1,13 +1,14 @@
 module.exports = function (grunt) {
-    'use strict';
+    'use strict'
     // load all grunt tasks
-    require('load-grunt-tasks')(grunt);
+    require('load-grunt-tasks')(grunt)
     var configFile = grunt.option('config') || 'config.json',
-        config = grunt.file.readJSON(configFile);
+        config = grunt.file.readJSON(configFile)
 
     grunt.initConfig({
         jshint: {
             options: {
+                force: true,
                 jshintrc: '.jshintrc'
             },
             all: [
@@ -100,10 +101,13 @@ module.exports = function (grunt) {
                         pattern: /\{\{smallImageUrl\}\}/i,
                         replacement: config.smallImageUrl
                     }, {
+                        pattern: /\{\{logoLink\}\}/i,
+                        replacement: config.logoLink
+                    }, {
                         pattern: /\{\{link\[(\d)\]\.([a-z0-9]*)\}\}/ig,
                         replacement: function (match, p1, p2) {
                             if (config.links[p1]) {
-                                return config.links[p1][p2];
+                                return config.links[p1][p2]
                             }
                         }
                     }]
@@ -137,12 +141,12 @@ module.exports = function (grunt) {
                 tasks: ['build']
             }
         }
-    });
+    })
 
     grunt.registerTask('lint', [
         'jshint',
         'scsslint'
-    ]);
+    ])
 
     grunt.registerTask('build', [
         'clean',
@@ -152,7 +156,11 @@ module.exports = function (grunt) {
         'sass',
         'string-replace:inline',
         'htmlmin'
-    ]);
+    ])
+
+    grunt.registerTask('default', [
+        'build'
+    ])
 
     // @todo serve task
-};
+}
