@@ -133,6 +133,10 @@ module.exports = function (grunt) {
         clean: {
             dist: {
                 src: ['build']
+            },
+            options: {
+                dot: true,
+                force: true
             }
         },
         watch: {
