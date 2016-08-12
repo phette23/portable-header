@@ -1,12 +1,12 @@
 {
     "prefix": "cca",
-    "logoLink": "http://libraries.cca.edu",
+    "logoLink": "https://libraries.cca.edu",
     "links": [{
             "text": "Libraries",
-            "url": "http://libraries.cca.edu"
+            "url": "https://libraries.cca.edu"
         }, {
             "text": "Catalog",
-            "url": "http://library.cca.edu/search"
+            "url": "https://library.cca.edu/search"
         }, {
             "text": "Databases",
             "url": "http://libraries.cca.edu/online"
@@ -15,7 +15,7 @@
             "url": "https://vault.cca.edu/logon.do"
         }, {
             "text": "Get Help",
-            "url": "mailto:refdesk@cca.edu"
+            "url": "https://libraries.cca.edu/contact"
     }],
     "largeImageUrl": "//s3.amazonaws.com/libapps/accounts/21563/images/orange-logo.jpg",
     "smallImageUrl": "//s3.amazonaws.com/libapps/accounts/21563/images/orange-logo-620w.jpg"
