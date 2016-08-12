@@ -9,4 +9,4 @@ cp -r build/* .
 rm -rf css js
 # commit & push
 git commit -am "merge changes from master"
-&& git push
+git push
